@@ -43,7 +43,10 @@ async def calculate(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("⚠️ Please send 3 values like:\n50000 108.47 15")
 
 if __name__ == "__main__":
-    TOKEN = "7924988033:AAE6wS6G3LYPhpg-0ltd-XLOS77yNeBYGjE"
+    import os
+    TOKEN = os.getenv("TOKEN")
+
+    
 
     app = ApplicationBuilder().token(TOKEN).build()
 
