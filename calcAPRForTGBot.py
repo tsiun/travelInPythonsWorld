@@ -16,7 +16,7 @@ def calculate_roi(profit, principal):
     return (profit / principal) * 100
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("👋 Send me 3 numbers: principal, profit, and days. Example:\n\n50_000 108.47 15")
+    await update.message.reply_text("👋 Send me 3 numbers: principal, profit, and days. Example:\n\n50000 108.47 15")
 
 async def calculate(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text:
@@ -45,8 +45,6 @@ async def calculate(update: Update, context: ContextTypes.DEFAULT_TYPE):
 if __name__ == "__main__":
     import os
     TOKEN = os.getenv("TOKEN")
-
-    
 
     app = ApplicationBuilder().token(TOKEN).build()
 
